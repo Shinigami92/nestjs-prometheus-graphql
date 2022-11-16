@@ -1,0 +1,23 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""Cats"""
+type Cat {
+  id: ID!
+  name: String!
+}
+
+type Query {
+  cat(id: String!): Cat!
+  cats(skip: Int = 0, take: Int = 25): [Cat!]!
+}
+
+type Mutation {
+  addCat(newCatData: NewCatInput!): Cat!
+  removeCat(id: String!): Boolean!
+}
+
+input NewCatInput {
+  name: String!
+}
